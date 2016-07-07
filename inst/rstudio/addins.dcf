@@ -1,0 +1,14 @@
+Name: Insert Comment 80
+Description: Inserts a comment of 80 characters in length
+Binding: InsertComment80
+Interactive: true
+
+Name: Insert Project Info Comment
+Description: Insert information about a project via comment of 80 characters in length.
+Binding: InsertcommentProjectInfo
+Interactive: true
+
+Name: New Project
+Description: Add directories and folders pertaining to a new project.
+Binding: CreateNewProjectDir
+Interactive: true

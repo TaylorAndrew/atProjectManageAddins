@@ -1,0 +1,15 @@
+Package: projectManageAddins
+Type: Package
+Title: Rstudio Addins for Managing Projects
+Version: 0.1.0
+Author: Andrew Taylor
+Maintainer: Andrew Taylor <ataylor9@hfhs.org>
+Description: Rstudio Addins for Managing Projects. Provides quick ways to add
+    comments, create new directories and output folders
+License: CCO
+LazyData: TRUE
+Import:
+    shiny (>= 0.13),
+    miniUI (>= 0.1.1),
+    rstudioapi(>= 0.5)
+RoxygenNote: 5.0.1
