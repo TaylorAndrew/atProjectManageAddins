@@ -1,0 +1,48 @@
+---
+title: "Planned Data Analysis"
+output: pdf_document
+---
+# MEMORANDUM
+**To:** 
+
+**CC:** 
+
+**From:** 
+
+**Subject:** 
+
+**Date:** `r format(Sys.Date(), "%A, %B %d, %Y")`
+
+```{r Intro, echo=FALSE, warning=FALSE, message=FALSE, error=FALSE, results='hide'}
+################################################################################
+###############################Required Packages################################
+################################################################################
+library(knitr)
+################################################################################
+##############################Session Information###############################
+################################################################################
+info <- sessionInfo()
+rVersion <- paste0(info$R.version$major, ".", info$R.version$minor)
+packageVersions <- function(i) {
+package <- data.frame(Package=names(info$otherPkgs[i]),
+                       Version=info$otherPkgs[[i]]$Version)
+return(package)
+}
+if(!is.null(info$otherPkgs)) {
+  packages <- do.call(rbind, lapply(1:length(info$otherPkgs), packageVersions))
+}
+################################################################################
+###################Power/Sample Size Justification Analysis#####################
+################################################################################
+
+```
+
+## Data Analysis:
+ 
+
+## Sample Size:
+
+
+## Sample Size Justification:
+
+

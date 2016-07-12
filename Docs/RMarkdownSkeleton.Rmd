@@ -1,0 +1,61 @@
+---
+title: "Statistics Report"
+output: word_document
+---
+# MEMORANDUM
+**To:** 
+
+**CC:** 
+
+**From:** 
+
+**Subject:** 
+
+**Date:** `r format(Sys.Date(), "%A, %B %d, %Y")`
+
+```{r Intro, echo=FALSE, warning=FALSE, message=FALSE, error=FALSE, results='hide'}
+################################################################################
+###############################Required Packages################################
+################################################################################
+library(knitr)
+################################################################################
+##############################Session Information###############################
+################################################################################
+info <- sessionInfo()
+rVersion <- paste0(info$R.version$major, ".", info$R.version$minor)
+packageVersions <- function(i) {
+package <- data.frame(Version=info$otherPkgs[[i]]$Version)
+row.names(package) <- names(info$otherPkgs[i])
+return(package)
+}
+if(!is.null(info$otherPkgs)) {
+  packages <- do.call(rbind, lapply(1:length(info$otherPkgs), packageVersions))
+}
+################################################################################
+###################################Data Prep####################################
+################################################################################
+
+```
+
+## Aims:
+The aim of this project was to...
+
+## Methods:
+All analyses were done using R v`r rVersion`. 
+
+## Results:
+```{r echo=FALSE, warning=FALSE, error=FALSE, message=FALSE, comment=FALSE}
+
+```
+
+Table 1. 
+```{r kable, echo=FALSE}
+
+```
+
+Figure 1. 
+```{r figures, echo=FALSE, fig.height=6, fig.width=7, dpi=300}
+
+```
+
+## Conclusions:
