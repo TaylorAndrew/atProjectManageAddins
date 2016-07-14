@@ -5,7 +5,7 @@ CreateNewProjectDir <- function() {
   # Our ui will be a simple gadget page, which
   # simply displays the time in a 'UI' output.
   ui <- miniPage(
-    gadgetTitleBar("Insert Comment"),
+    gadgetTitleBar("New Project Directory"),
     miniContentPanel(
       textInput('Dir', "Directory:", getwd()),
       textInput('FolderName', "Folder Name:", ''),
@@ -63,8 +63,7 @@ newProject <- function(Dir,
 
   }
 
-  viewer <- dialogViewer()
+  viewer <- dialogViewer("New Project", 400, 400)
   runGadget(ui, server, viewer = viewer)
-
 }
 
