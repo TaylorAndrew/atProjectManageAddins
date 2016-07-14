@@ -63,13 +63,8 @@ newProject <- function(Dir,
 
   }
 
-  # We'll use a pane viwer, and set the minimum height at
-  # 300px to ensure we get enough screen space to display the clock.
-  viewer <- paneViewer(300)
+  viewer <- dialogViewer()
   runGadget(ui, server, viewer = viewer)
 
 }
-
-# Try running the clock!
-# CreateNewProjectDir()
 
