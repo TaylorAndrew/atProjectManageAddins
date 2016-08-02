@@ -66,6 +66,3 @@ newProject <- function(Dir,
   viewer <- dialogViewer("New Project", 400, 400)
   runGadget(ui, server, viewer = viewer)
 }
-
-foo <- function() file.exists("./inst/Docs/RMarkdownSkeleton.Rmd")
-
