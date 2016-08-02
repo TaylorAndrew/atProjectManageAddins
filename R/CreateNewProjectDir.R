@@ -34,7 +34,7 @@ newProject <- function(Dir,
   dir.create(paste0(Dir, FolderName, "/Reports"))
   dir.create(paste0(Dir, FolderName, "/Documents"))
   if(addReportSkeleton==T) {
-    file.copy(file.path("./Docs/RMarkdownSkeleton.Rmd"), paste0(Dir,
+    file.copy("./Docs/RMarkdownSkeleton.Rmd", paste0(Dir,
                                                         FolderName,
                                                         "/Reports/",
                                                         FolderName,
