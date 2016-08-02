@@ -34,7 +34,7 @@ newProject <- function(Dir,
   dir.create(paste0(Dir, FolderName, "/Reports"))
   dir.create(paste0(Dir, FolderName, "/Documents"))
   if(addReportSkeleton==T) {
-    file.copy(file.path("./Inst/Docs/RMarkdownSkeleton.Rmd"), paste0(Dir,
+    file.copy(file.path("./inst/Docs/RMarkdownSkeleton.Rmd"), paste0(Dir,
                                                         FolderName,
                                                         "/Reports/",
                                                         FolderName,
@@ -67,3 +67,4 @@ newProject <- function(Dir,
   runGadget(ui, server, viewer = viewer)
 }
 
+foo <- function(x) file.exists("./inst/Docs/RMarkdownSkeleton.Rmd")

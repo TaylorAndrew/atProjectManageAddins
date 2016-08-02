@@ -12,3 +12,8 @@ Name: New Project
 Description: Add directories and folders pertaining to a new project.
 Binding: CreateNewProjectDir
 Interactive: true
+
+Name: foo
+Description: Add directories and folders pertaining to a new project.
+Binding: foo
+Interactive: true
