@@ -1,1 +1,1 @@
-    foo <- function(x) file.exists("./Inst/Docs/RMarkdownSkeleton.Rmd")
+    foo <- function(x) file.exists("./Docs/RMarkdownSkeleton.Rmd")
