@@ -1,4 +1,4 @@
-Package: projectManageAddins
+Package: atProjectManageAddins
 Type: Package
 Title: Rstudio Addins for Managing Projects
 Version: 0.1.0
