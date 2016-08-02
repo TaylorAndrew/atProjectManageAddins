@@ -67,4 +67,5 @@ newProject <- function(Dir,
   runGadget(ui, server, viewer = viewer)
 }
 
-foo <- function(x) file.exists("./inst/Docs/RMarkdownSkeleton.Rmd")
+foo <- function() file.exists("./inst/Docs/RMarkdownSkeleton.Rmd")
+
