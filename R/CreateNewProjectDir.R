@@ -41,17 +41,13 @@ newProject <- function(Dir,
               paste0(Dir, FolderName, "/Documents/", FolderName, "_PDA.Rmd"))
   }
 }
-
-
-    # Listen for 'done' events. When we're finished, we'll
-    # insert the current time, and then stop the gadget.
     observeEvent(input$done, {
       newProject(Dir=input$Dir,
                  FolderName=input$FolderName,
                  addReportSkeleton=input$addReportSkeleton,
                  addPDAReportSkeleton=input$addPDAReportSkeleton,
                  recursive=input$recursive)
-      print(file.exists(system.file("Docs","RMarkdownSkeleton.rmd", package="atProjectManageAddins")))
+      rstudioapi::sendToConsole(file.exists(system.file("Docs","RMarkdownSkeleton.rmd", package="atProjectManageAddins")))
       stopApp()
     })
 
