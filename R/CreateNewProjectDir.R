@@ -17,7 +17,6 @@ CreateNewProjectDir <- function() {
 
   server <- function(input, output, session) {
 
-
 newProject <- function(Dir,
                        FolderName,
                        addReportSkeleton=FALSE,
@@ -52,6 +51,7 @@ newProject <- function(Dir,
                  addReportSkeleton=input$addReportSkeleton,
                  addPDAReportSkeleton=input$addPDAReportSkeleton,
                  recursive=input$recursive)
+      print(file.exists(system.file("Docs","RMarkdownSkeleton.rmd", package="atProjectManageAddins")))
       stopApp()
     })
 
