@@ -3,4 +3,3 @@
 import(miniUI)
 import(shiny)
 import(rstudioapi)
-export(foo)
