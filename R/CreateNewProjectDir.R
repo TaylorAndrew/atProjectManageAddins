@@ -47,7 +47,6 @@ newProject <- function(Dir,
                  addReportSkeleton=input$addReportSkeleton,
                  addPDAReportSkeleton=input$addPDAReportSkeleton,
                  recursive=input$recursive)
-      rstudioapi::sendToConsole(file.exists(system.file("Docs","RMarkdownSkeleton.rmd", package="atProjectManageAddins")))
       stopApp()
     })
 
