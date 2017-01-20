@@ -16,7 +16,7 @@ CreateNewProjectDir <- function() {
   )
 
   server <- function(input, output, session) {
-print(system.file(package="shiny"))
+print(system.file(package="atProjectManageAddins"))
 newProject <- function(Dir,
                        FolderName,
                        addReportSkeleton=FALSE,
@@ -33,16 +33,16 @@ newProject <- function(Dir,
   dir.create(paste0(Dir, FolderName, "/Reports"))
   dir.create(paste0(Dir, FolderName, "/Documents"))
   if(addReportSkeleton==T) {
-    file.copy(file.path(path.package("atProjectManageAddins"), "Docs/RMarkdownSkeleton.Rmd", 
+    file.copy(file.path(path.package("atProjectManageAddins"), "/Docs/RMarkdownSkeleton.Rmd",
           file.path(getwd(), "/Reports/", paste0(reportName, "_report.Rmd"))))
   }
   if(addPDAReportSkeleton==T) {
-    file.copy(file.path(path.package("atProjectManageAddins"), "Docs/RMarkdown_PDA_Skeleton.Rmd", 
+    file.copy(file.path(path.package("atProjectManageAddins"), "/Docs/RMarkdown_PDA_Skeleton.Rmd",
           file.path(getwd(), "/Documents/", paste0(reportName, "_report.Rmd"))))
   }
 }
     observeEvent(input$done, {
-    print(system.file(package="shiny"))
+    print(system.file(package="atProjectManageAddins"))
       newProject(Dir=input$Dir,
                  FolderName=input$FolderName,
                  addReportSkeleton=input$addReportSkeleton,
