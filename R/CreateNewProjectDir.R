@@ -14,8 +14,7 @@ CreateNewProjectDir <- function() {
     )
   )
 
-  server <- function(input, output, session) {
-print(system.file(package="atProjectManageAddins"))
+server <- function(input, output, session) {
 newProject <- function(Dir,
                        FolderName,
                        addReportSkeleton=FALSE,
@@ -42,7 +41,6 @@ newProject <- function(Dir,
   }
 }
     observeEvent(input$done, {
-    print(system.file(package="atProjectManageAddins"))
       newProject(Dir=input$Dir,
                  FolderName=input$FolderName,
                  addReportSkeleton=input$addReportSkeleton,
