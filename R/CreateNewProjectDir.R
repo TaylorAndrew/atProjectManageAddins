@@ -1,5 +1,4 @@
 # We'll wrap our Shiny Gadget in an addin.
-# Let's call it 'clockAddin()'.
 CreateNewProjectDir <- function() {
 
   # Our ui will be a simple gadget page, which
@@ -32,13 +31,14 @@ newProject <- function(Dir,
   dir.create(paste0(Dir, FolderName, "/Output"))
   dir.create(paste0(Dir, FolderName, "/Reports"))
   dir.create(paste0(Dir, FolderName, "/Documents"))
+  library(atProjectManageAddins)
   if(addReportSkeleton==T) {
-    file.copy(file.path(path.package("atProjectManageAddins"), "/Docs/RMarkdownSkeleton.Rmd",
-          file.path(getwd(), "/Reports/", paste0(reportName, "_report.Rmd"))))
+    file.copy(file.path(path.package("atProjectManageAddins"), "Docs/RMarkdownSkeleton.Rmd"),
+          file.path(paste0(Dir, FolderName,  "/Reports/", paste0(FolderName, "_report.Rmd"))))
   }
   if(addPDAReportSkeleton==T) {
-    file.copy(file.path(path.package("atProjectManageAddins"), "/Docs/RMarkdown_PDA_Skeleton.Rmd",
-          file.path(getwd(), "/Documents/", paste0(reportName, "_report.Rmd"))))
+    file.copy(file.path(path.package("atProjectManageAddins"), "Docs/RMarkdown_PDA_Skeleton.Rmd"),
+          file.path(paste0(Dir, FolderName, "/Documents/", paste0(FolderName, "_report.Rmd"))))
   }
 }
     observeEvent(input$done, {
