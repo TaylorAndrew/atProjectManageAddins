@@ -37,7 +37,7 @@ newProject <- function(Dir,
   }
   if(addPDAReportSkeleton==T) {
     file.copy(file.path(path.package("atProjectManageAddins"), "Docs/RMarkdown_PDA_Skeleton.Rmd"),
-          file.path(paste0(Dir, FolderName, "/Documents/", paste0(FolderName, "_report.Rmd"))))
+          file.path(paste0(Dir, FolderName, "/Documents/", paste0(FolderName, "_PDA.Rmd"))))
   }
 }
     observeEvent(input$done, {
